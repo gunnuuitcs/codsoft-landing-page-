@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unguided Meditation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="./assets/css/unguided.css">
+</head>
+
+<body>
+  <header>
+    <a href="./meditationlanding.html"><button type="button" class="btn btn-danger btn-lg" id="quit">Quit</button></a>
+  </header>
+  <div class="main">
+      
+        <video >
+          <source src="https://player.vimeo.com/external/469921725.sd.mp4?s=07b9ba4c866b12babbf0d1a2ad84409cf675be83&profile_id=139&oauth2_token_id=57447761" loop autoplay muted  type="video/mp4">
+        </video>
+     <!--- right part --->
+  	 <div class="right">
+
+        <div class="show_song_no">
+          <p id="present">1</p>
+          <p>/</p>
+          <p id="total">5</p>
+        </div>
+
+       <!--- song title & artist name --->
+      <p id="title">title.mp3</p>
+      <p id="artist">Artist name</p>
+      
+      <!--- middle part --->
+  	 	<div class="middle">
+            <div class="time">
+                <h1 class="label" id="hr">00:</h1>
+                
+            
+                <h1 class="label" id="min">00:</h1>
+                
+
+                <h1 class="label" id="sec">00</h1>
+                
+            </div>
+           </div>
+            <div class="button">
+                <div>
+                    <button class="btn btn-danger" onclick="reset()" id="reset">Reset</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="stop()" id="stop">Stop</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="start()" id="start">Start</button>
+                </div>
+            </div>
+            <br><br><br>
+        <div class="player">
+  	       <button onclick="previous_song()" id="pre" class="btn btn-danger"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+      	   <button onclick="justplay()" id="play" class="btn btn-danger"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button onclick="juststop()" id="stoped" class="btn btn-danger"><i class="fa fa-stop" aria-hidden="true"></i></button>
+  	       <button onclick="next_song()" id="next" class="btn btn-danger"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+  	   </div>
+         <br><br><br><br><br><br>
+       <!--- song duration part --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+           <button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+           <br>
+           <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+        </div>
+        <br><br><br><br><br><br>
+        
+
+
+  </div>
+  
+   
+  <!--- Add javascript file --->
+  <script src="./assets/js/unguided.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+
+</body>
+</html>

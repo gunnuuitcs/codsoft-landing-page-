@@ -1,0 +1,84 @@
+body{
+    background: linear-gradient(to bottom left, #33ccff 35%, #cc33ff 78%);
+    height: 100vh;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    background-image: url(https://www.flaticon.com/svg/vstatic/svg/3202/3202926.svg?token=exp=1613062721~hmac=f41d4597b0a6245891572b6e07a969ce);
+}
+
+#tico {
+    margin-left: 2% !important;
+    padding-left: 2%;
+    margin-top: 0% !important;
+    /* padding-top: 1vw; */
+    font-size: 5vw;
+}
+
+.start {
+    margin-top: 5%;
+    margin-left: 43%;
+}
+
+.memory-game {
+    padding-top: 2%;
+    width: 40vw;
+    height: 30vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 210.7481559536354vh;
+}
+
+.memory-card {
+    background-color: greenyellow;
+    width: 25%;
+    height: 25%;
+    margin: 0.1vw;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateX(180deg);
+}
+
+.hidden,
+.shown {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden;
+}
+
+.hidden {
+    transform: rotateX(180deg);
+}
+
+.numed{
+    
+    background: #330000;
+    color: red;
+    height: 30px;
+    width: 50px;
+    margin-left: 2vw;
+    
+}

@@ -1,0 +1,131 @@
+body{
+    background: linear-gradient(to bottom left, #33ccff 35%, #cc33ff 78%);
+    height: 100vh;
+}
+#game1 {
+    width: 60%;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    
+}
+
+#flash_display {
+    font-size: 150px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    top: 20%;
+
+}
+#msg{
+    display: flex;
+    justify-content: center;
+}
+
+
+#play {
+    position: absolute;
+    width: 100px;
+    bottom: 10px;
+    left: 47%;
+    
+    
+}
+#play:hover{
+    padding: 5px;
+}
+
+#answer{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 10%;
+}
+
+#choices{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 15px;
+    font-size: 50px;
+}
+
+#choices span:hover{
+    font-size: 65px;
+    cursor: pointer;
+}
+
+#answer span:hover{
+    font-size: 65px;
+    cursor: pointer;
+}
+
+#correct{
+    color: green;
+    font-size: 80px;
+    display: none;
+    animation-name: msg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+
+}
+
+#wrong{
+    color:red;
+    display: none;
+    font-size: 80px;
+    animation-name: msg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+}
+
+@keyframes msg {
+    0%{
+        opacity: 0%;
+        font-size: 0px;
+    }
+    50%{
+        opacity: 100%;
+        font-size: 80px;
+    }
+    100%{
+        opacity: 100%;
+        font-size: 80px;
+    }
+}
+
+
+  
+ #game1:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+  }
+
+  .numed{
+    
+    background: #330000;
+    color: red;
+    height: 30px;
+    width: 50px;
+    margin-left: 2vw;
+    
+}

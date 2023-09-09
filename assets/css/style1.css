@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url(../images/p6.jpg);
+    background-position: center;
+    font-family:sans-serif;
+
+}
+.contact-title {
+    margin-top: 100px;
+    color: white;
+    text-transform: uppercase;
+    transition: all 2s ease-in-out;
+}
+.contact-title h1 {
+    font-size: 32px;
+    line-height: 10px;
+    font-family:sans-serif;
+    text-align: center;
+}
+.contact-title h2 {
+    font-size: 16px;
+    font-family:sans-serif;
+
+}
+@media only screen and (max-width: 600px) {
+    .form-control{
+      margin-left: 2% !important;
+      
+      
+    }
+  }
+.form-control{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(11, 2, 20);
+    color: white;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+input {
+    height: 45px;
+    
+}
+form .submit {
+    background:transparent;
+    border-color: rgb(10, 4, 29);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    width: 250px ;
+    margin-top: 20px;
+}
+form.submit:hover{
+    background-color: #110e0e;
+    cursor: pointer;
+    
+}
+/* nav bar */
+@media only screen and (max-width: 1200px) {
+    ul {
+      margin-left: 40% !important;
+    }
+  }
+ul{
+	margin-left: 80%;
+    
+	list-style-type: none;
+	margin-top: 20px;
+}
+ul li{
+	display:inline-block;
+}
+ul li a{
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+ul li a:hover{
+	background-color: #f08080;
+	color: #000;
+}
+ul li.active a{
+	background-color: #ffffff;
+	color:#000;
+}
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
